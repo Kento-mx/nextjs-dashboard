@@ -1,6 +1,14 @@
 import { monstserrat } from './ui/fonts';
 import './ui/global.css';
 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Acme Dashboard',
+  description: 'The official Next.js Course Dashboard, built with App Router.',
+  metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -10,9 +18,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${monstserrat.className} antialiased`}>
         {children}
-        <footer className='py=10 flex justify-center items-center mt-2'>
-          Hecho por mi corazoncito ❤️ y mis pelotas 🥝🍆🥝
-        </footer>
       </body>
     </html>
   );
